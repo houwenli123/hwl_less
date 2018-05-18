@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>less 通过代码编译less</title>
+</head>
+
+<body class="claro index">
+    <script type="text/javascript" data-main="./public/js/main" src="./public/js/require.js"></script>
+    <script>
+        require(['less'], function(less) {
+            less.render('.class { width: (1 + 1) }', function(e, output) {
+                console.log(output.css);
+            });
+        })
+    </script>
+    <div>Less</div>
+</body>
+
+</html>
